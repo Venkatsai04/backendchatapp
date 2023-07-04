@@ -29,13 +29,13 @@ db.on('disconnected', function () {
 })
 mongoose.set('strictQuery', true)
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'https://not-whatsup.netlify.app');
   next();
 })
 
 
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'https://not-whatsup.netlify.app'
 }));
 
 
@@ -206,7 +206,7 @@ try {
 
 const io = socket(server, {
   cors: {
-    origin: "https://not-whatsup.onrender.com",
+    origin: "https://not-whatsup.netlify.app",
     credentials: true,
   },
 });
