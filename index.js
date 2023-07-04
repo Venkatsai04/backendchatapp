@@ -206,7 +206,7 @@ try {
 
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://not-whatsup.onrender.com",
     credentials: true,
   },
 });
